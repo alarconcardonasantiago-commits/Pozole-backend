@@ -9,7 +9,7 @@ ParkingRaffleCtrl::ParkingRaffleCtrl() {
         sd.apartamento = apts[i];
         datosSorteo.push_back(sd);
     }
-    for (int i = 1; i <= 4; ++i) {
+    for (int i = 1; i <= 20; ++i) {
         Parqueadero p;
         p.num_parqueadero = i;
         parqueaderos.push_back(p);
@@ -169,6 +169,26 @@ void ParkingRaffleCtrl::estado(const HttpRequestPtr& req, std::function<void(con
 
     resJson["status"] = "success";
     resJson["data"] = estadoArr;
+
+    auto resp = HttpResponse::newHttpJsonResponse(resJson);
+    callback(resp);
+}
+
+void ParkingRaffleCtrl::reset(const HttpRequestPtr& req, std::function<void(const HttpResponsePtr&)>&& callback) {
+    std::lock_guard<std::mutex> lock(mtx_);
+    Json::Value resJson;
+    
+    for (auto& p : parqueaderos) {
+        p.ocupado = false;
+    }
+    for (auto& d : datosSorteo) {
+        d.inscrito = false;
+        d.ganador = false;
+        d.parqueadero_asignado = -1;
+    }
+
+    resJson["status"] = "success";
+    resJson["message"] = "Parqueadero reseteado";
 
     auto resp = HttpResponse::newHttpJsonResponse(resJson);
     callback(resp);

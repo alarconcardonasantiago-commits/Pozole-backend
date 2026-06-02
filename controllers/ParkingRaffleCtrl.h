@@ -25,6 +25,7 @@ public:
     ADD_METHOD_TO(ParkingRaffleCtrl::sorteo, "/api/parqueadero/sorteo", Post);
     ADD_METHOD_TO(ParkingRaffleCtrl::resultados, "/api/parqueadero/resultados", Get);
     ADD_METHOD_TO(ParkingRaffleCtrl::estado, "/api/parqueadero/estado", Get);
+    ADD_METHOD_TO(ParkingRaffleCtrl::reset, "/api/parqueadero/reset", Post);
     METHOD_LIST_END
 
     ParkingRaffleCtrl();
@@ -33,6 +34,7 @@ public:
     void sorteo(const HttpRequestPtr& req, std::function<void(const HttpResponsePtr&)>&& callback);
     void resultados(const HttpRequestPtr& req, std::function<void(const HttpResponsePtr&)>&& callback);
     void estado(const HttpRequestPtr& req, std::function<void(const HttpResponsePtr&)>&& callback);
+    void reset(const HttpRequestPtr& req, std::function<void(const HttpResponsePtr&)>&& callback);
 
 private:
     std::vector<SorteoData> datosSorteo;

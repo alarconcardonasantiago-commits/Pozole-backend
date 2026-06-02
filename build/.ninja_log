@@ -9,3 +9,5 @@
 41	3633	8020936294911669	CMakeFiles/PozoleBackend.dir/main.cpp.obj	774ee7fe80c220cc
 36	3779	8020936294871685	CMakeFiles/PozoleBackend.dir/controllers/AccessControlCtrl.cc.obj	b43aa4632596897b
 24	470	8020936451793079	PozoleBackend.exe	280e92a6ef20e08c
+15	4169	8020980078191984	CMakeFiles/PozoleBackend.dir/controllers/ParkingRaffleCtrl.cc.obj	2c38613878c2ada2
+4169	4600	8020980119733006	PozoleBackend.exe	280e92a6ef20e08c
