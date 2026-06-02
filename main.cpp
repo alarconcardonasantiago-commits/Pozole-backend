@@ -14,7 +14,7 @@ int main() {
                 auto resp = drogon::HttpResponse::newHttpResponse();
                 resp->addHeader("Access-Control-Allow-Origin", "*");
                 resp->addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-                resp->addHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+                resp->addHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With, Bypass-Tunnel-Reminder");
                 resp->addHeader("Access-Control-Max-Age", "86400");
                 resp->setStatusCode(drogon::k204NoContent);
                 return resp; // Responde de inmediato
@@ -28,7 +28,7 @@ int main() {
         [](const drogon::HttpRequestPtr&, const drogon::HttpResponsePtr& resp) {
             resp->addHeader("Access-Control-Allow-Origin", "*");
             resp->addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-            resp->addHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+            resp->addHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With, Bypass-Tunnel-Reminder");
         }
     );
 

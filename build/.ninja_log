@@ -1,10 +1,11 @@
 # ninja log v7
 20	4419	8020818943626124	CMakeFiles/PozoleBackend.dir/controllers/AccessControlCtrl.cc.obj	b43aa4632596897b
-33	4655	8020818943755580	CMakeFiles/PozoleBackend.dir/main.cpp.obj	774ee7fe80c220cc
+17	3504	8020881589789106	CMakeFiles/PozoleBackend.dir/main.cpp.obj	774ee7fe80c220cc
 25	4762	8020818943674165	CMakeFiles/PozoleBackend.dir/controllers/ParkingRaffleCtrl.cc.obj	2c38613878c2ada2
 29	4862	8020818943715531	CMakeFiles/PozoleBackend.dir/controllers/ThermalSecurityCtrl.cc.obj	9753741d9ebe9b43
-4862	5330	8020818992050327	PozoleBackend.exe	280e92a6ef20e08c
-33	3550	8020854418765935	CMakeFiles/PozoleBackend.dir/main.cpp.obj	774ee7fe80c220cc
-3550	3976	8020854453936588	PozoleBackend.exe	280e92a6ef20e08c
-17	3504	8020881589789106	CMakeFiles/PozoleBackend.dir/main.cpp.obj	774ee7fe80c220cc
 23	485	8020881717629865	PozoleBackend.exe	280e92a6ef20e08c
+10	1787	8020936294168683	build.ninja	1f717d331f8c7479
+10	1787	8020936294168683	F:/proyectos/Pozole-backend/build/cmake_install.cmake	1f717d331f8c7479
+41	3633	8020936294911669	CMakeFiles/PozoleBackend.dir/main.cpp.obj	774ee7fe80c220cc
+36	3779	8020936294871685	CMakeFiles/PozoleBackend.dir/controllers/AccessControlCtrl.cc.obj	b43aa4632596897b
+24	470	8020936451793079	PozoleBackend.exe	280e92a6ef20e08c
