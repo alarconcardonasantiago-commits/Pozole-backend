@@ -2,12 +2,24 @@
 #include <cstdlib>
 #include <string>
 
+/*
+ * ============================================================================
+ * ARCHIVO: main.cpp (Backend - C++)
+ * DESCRIPCIÓN: Punto de entrada principal de la aplicación.
+ * HERRAMIENTA PRINCIPAL: Drogon (Framework web de alto rendimiento para C++).
+ * FUNCIÓN: Inicia el servidor, define el puerto de escucha y configura las
+ * reglas de CORS (Cross-Origin Resource Sharing) para permitir que el frontend
+ * (React/Vite en otro dominio) se comunique sin bloqueos de seguridad.
+ * ============================================================================
+ */
+
 int main() {
-    // Render asigna el puerto mediante la variable de entorno PORT
+    // Definimos el puerto. Usamos la librería estándar <cstdlib> para leer variables de entorno.
     const char* portEnv = std::getenv("PORT");
     int port = portEnv ? std::stoi(std::string(portEnv)) : 8080;
 
-    // Interceptar cualquier OPTIONS agresivamente antes de que Drogon busque la ruta
+    // Configuración de CORS: Interceptamos peticiones "OPTIONS" (preflight requests)
+    // que hacen los navegadores por seguridad antes de peticiones complejas.
     drogon::app().registerSyncAdvice(
         [](const drogon::HttpRequestPtr& req) -> drogon::HttpResponsePtr {
             if (req->method() == drogon::Options) {

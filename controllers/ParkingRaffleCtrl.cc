@@ -2,6 +2,17 @@
 #include <algorithm>
 #include <random>
 
+/*
+ * ============================================================================
+ * ARCHIVO: ParkingRaffleCtrl.cc (Backend - C++)
+ * DESCRIPCIÓN: Controlador que maneja la lógica de los parqueaderos.
+ * HERRAMIENTAS: Drogon (Controladores HTTP), <vector> (Manejo de listas en memoria),
+ * <mutex> (Para evitar problemas si varios usuarios acceden al mismo tiempo).
+ * FUNCIÓN: Permite consultar el estado de los parqueaderos y resetearlos. Todo
+ * se guarda en memoria RAM mientras el programa se ejecuta (no usa base de datos).
+ * ============================================================================
+ */
+
 ParkingRaffleCtrl::ParkingRaffleCtrl() {
     std::string apts[] = {"101","102","201","202","301","302","401","402","501","502"};
     for (int i = 0; i < 10; ++i) {

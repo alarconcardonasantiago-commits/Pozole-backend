@@ -2,6 +2,17 @@
 #include <cmath>
 #include <random>
 
+/*
+ * ============================================================================
+ * ARCHIVO: ThermalSecurityCtrl.cc (Backend - C++)
+ * DESCRIPCIÓN: Simulador del sistema de seguridad térmica.
+ * HERRAMIENTAS: Drogon (API REST), <random> (Generación de temperaturas aleatorias),
+ * jsoncpp (Formateo de datos a formato JSON).
+ * FUNCIÓN: Crea temperaturas falsas para 5 zonas, las analiza y devuelve un
+ * listado de sensores y alertas al frontend en formato JSON.
+ * ============================================================================
+ */
+
 ThermalSecurityCtrl::ThermalSecurityCtrl() {
     std::string zonas[] = {"Piso 1", "Piso 2", "Piso 3", "Piso 4", "Piso 5"};
     for (int i = 0; i < 5; ++i) {
